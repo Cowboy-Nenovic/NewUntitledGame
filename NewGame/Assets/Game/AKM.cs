@@ -30,8 +30,5 @@ public class AKM : MonoBehaviour
         
     }
 
-    public float getRPM()
-    {
-        return timeBetweenFiring;
-    }
+    public float getRPM() => timeBetweenFiring;
 }

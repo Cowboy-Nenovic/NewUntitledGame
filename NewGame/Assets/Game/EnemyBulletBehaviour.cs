@@ -8,6 +8,7 @@ public class EnemyBulletBehaviour : MonoBehaviour
     private Rigidbody2D rb;
     public float force = 5;
     private float rotation;
+    private int damageStrength = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -26,4 +27,13 @@ public class EnemyBulletBehaviour : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth targetEnemy))
+        {
+            
+            targetEnemy.setDamage(damageStrength);
+        }
+            Destroy(gameObject);
+  }
 }
