@@ -843,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 1099572878}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.086, y: -0.061, z: 0}
+  m_LocalPosition: {x: 0.086, y: 0.22, z: 0}
   m_LocalScale: {x: 0.13203512, y: 0.14469601, z: 0.48232}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   bullet: {fileID: 4289471396661388422, guid: 891bed0e1f2e08841b6c865138d1fa8e, type: 3}
   bulletTransform: {fileID: 1417653441}
   canFire: 1
-  player: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!1 &1585413977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1424,7 @@ MonoBehaviour:
   weaponSelected: {fileID: 0}
   stringTemp: 
   intTemp: 0
+  floatTemp: 0
 --- !u!1 &1791566169
 GameObject:
   m_ObjectHideFlags: 0
