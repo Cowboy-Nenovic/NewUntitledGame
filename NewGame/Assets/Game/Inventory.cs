@@ -25,8 +25,10 @@ public class Inventory : MonoBehaviour
 
         weaponSelected = secondary;
         intTemp = 30;
-
-        
+       Instantiate(akm);
+       Instantiate(tt33);
+       Instantiate(weaponSelected);
+        weaponSelected = secondary;
     }
 
     // Update is called once per frame
@@ -47,18 +49,18 @@ public class Inventory : MonoBehaviour
     }
     public string getWeaponSelected()
     {
-        //stringTemp = weaponSelected.name;
+        // stringTemp = weaponSelected.name;
         return stringTemp;
     }
 
     public int getDamange()
     {
-       // intTemp = akm.damageStrength;
+      //  intTemp = akm.damageStrength;
         return intTemp;
     }
     public float getRPM()
     {
-       // floatTemp = weaponSelected.timeBetweenFiring;
+    //    floatTemp = weaponSelected.timeBetweenFiring;
         return floatTemp;
     }
 
