@@ -23,3 +23,5 @@ MonoBehaviour:
   fireSpeed: 5
   fullAuto: 1
   primary: 1
+  equipped: 0
+  recoil: 5

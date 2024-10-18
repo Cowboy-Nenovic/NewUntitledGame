@@ -15,7 +15,7 @@ MonoBehaviour:
   name: AKM
   damage: 35
   maxRange: 100
-  currentAmmo: 30
+  currentAmmo: 0
   magazineSize: 30
   reloadState: 0
   reloadSpeed: 2
@@ -24,3 +24,4 @@ MonoBehaviour:
   fullAuto: 1
   primary: 1
   equipped: 0
+  recoil: 90

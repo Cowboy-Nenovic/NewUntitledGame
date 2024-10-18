@@ -19,6 +19,7 @@ public class WeaponData : ScriptableObject
     public bool fullAuto;
     public bool primary;
     public bool equipped;
+    public float recoil;
     
    
 }
