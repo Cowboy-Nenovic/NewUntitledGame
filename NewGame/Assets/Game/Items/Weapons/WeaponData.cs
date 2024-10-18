@@ -18,6 +18,7 @@ public class WeaponData : ScriptableObject
     public float fireSpeed;
     public bool fullAuto;
     public bool primary;
+    public bool equipped;
     
    
 }
