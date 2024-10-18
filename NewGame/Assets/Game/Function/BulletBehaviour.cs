@@ -8,7 +8,7 @@ public class BulletBehaviour : MonoBehaviour
     public float force;
     public int damageStrength;
     public EnemyDamage Enemy;
-    public Inventory inventory;
+
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rigidbody;
@@ -35,7 +35,7 @@ public class BulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,7 +43,7 @@ public class BulletBehaviour : MonoBehaviour
         if (collision.gameObject.TryGetComponent<EnemyDamage>(out EnemyDamage targetEnemy))
         {
             
-            damageStrength = inventory.intTemp;
+            damageStrength = 35;
             targetEnemy.setDamage(damageStrength);
         }
             Destroy(gameObject);

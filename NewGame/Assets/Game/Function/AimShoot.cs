@@ -8,7 +8,6 @@ public class AimShoot : MonoBehaviour
 
     private Camera mainCam;
     private Vector3 mousePos;
-    public bool canFire;
     public static Action ShootInput;
     public static Action ReloadInput;
 
@@ -31,10 +30,10 @@ public class AimShoot : MonoBehaviour
         float rotateZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotateZ);
 
+        
 
 
-
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButton(0))
         {
             ShootInput?.Invoke();
         }

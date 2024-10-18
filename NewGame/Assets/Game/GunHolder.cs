@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,15 @@ using UnityEngine;
 public class GunHolder : MonoBehaviour
 {
     [Header ("Refrences")]
-     [SerializeField] WeaponData weaponData;
+     [SerializeField] public WeaponData weaponData;
+     Weapon childScript = new Weapon();
 
-    
-    public void Shoot()
+    void Update()
     {
-    
+        childScript = GetComponentInChildren<Weapon>();
+        weaponData = childScript.weaponData;
+        
     }
+ 
 
 }

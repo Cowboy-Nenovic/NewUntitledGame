@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
 
       [Header ("Refrences")]
-     [SerializeField] private WeaponData weaponData;
+     [SerializeField] public WeaponData weaponData;
      [SerializeField] private Transform Muzzle;
      public GameObject Bullet;
     float TimeSinceLastShot; 
@@ -17,6 +17,7 @@ public class Weapon : MonoBehaviour
     {
         AimShoot.ShootInput += CheckCanShoot;
         AimShoot.ReloadInput += StartReload;
+        
     }
 
     private void Update(){

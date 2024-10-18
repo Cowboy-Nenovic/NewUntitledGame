@@ -29,6 +29,7 @@ public class PickUpController : MonoBehaviour
             coll.isTrigger = true;
             slotFull = true;
             gunScript.enabled = true;
+            
         }
     }
 
@@ -59,6 +60,7 @@ public class PickUpController : MonoBehaviour
 
         //Enable script
         gunScript.enabled = true;
+        
     }
 
     private void Drop()

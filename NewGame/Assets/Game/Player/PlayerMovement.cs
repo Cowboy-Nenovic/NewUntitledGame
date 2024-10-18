@@ -4,8 +4,13 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D body;
     private bool grounded;
-   
-   private void Awake()
+    private Vector3 mousePos;
+    private Camera mainCam;
+       
+       void Start(){
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+       }
+       private void Awake()
    {
     body = GetComponent<Rigidbody2D>();
        
@@ -13,12 +18,14 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        float horizontalMousePos = mousePos.x;
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * 2, body.velocity.y);
 
-        if (horizontalInput > 0.01f)
+        if (horizontalMousePos > 0.01f)
             transform.localScale = Vector3.one;
-        else if (horizontalInput < 0.01f)
+        else if (horizontalMousePos < 0.01f)
             transform.localScale = new Vector3(-1,1,1);
 
         if (Input.GetKeyDown(KeyCode.Space) == true && grounded)
