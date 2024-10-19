@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
     }
   }
   private void ShootGun(){
-  Muzzle.localRotation = Quaternion.Euler(new Vector3(Muzzle.localRotation.x, Muzzle.localRotation.y, UnityEngine.Random.Range(-weaponData.recoil,weaponData.recoil)));
+ // Muzzle.localRotation = Quaternion.Euler(new Vector3(Muzzle.localRotation.x, Muzzle.localRotation.y, UnityEngine.Random.Range(-weaponData.recoil,weaponData.recoil)));
   GameObject newBullet = Instantiate(Bullet, Muzzle.position, Quaternion.identity);
   newBullet.GetComponent<BulletBehaviour>().force =10;
   }

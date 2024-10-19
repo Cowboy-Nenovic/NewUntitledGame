@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - GunHolder
   - UIController
+  - Enviroment
   layers:
   - Default
   - TransparentFX
