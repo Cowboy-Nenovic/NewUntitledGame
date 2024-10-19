@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+    [Header ("Refrences")]
+    [SerializeField] public EnemyData enemyData;
     // Start is called before the first frame update
     void Start()
     {

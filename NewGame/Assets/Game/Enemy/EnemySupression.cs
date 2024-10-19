@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySupression : MonoBehaviour
 {
+    public EnemyController enemyController;
+    
     // Start is called before the first frame update
     void Start()
     {
