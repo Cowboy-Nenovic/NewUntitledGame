@@ -41,7 +41,7 @@ public class MenuController : MonoBehaviour
     private float _brightnessLevel;
 
     [Header("Confirmation")]
-    [SerializeField] private GameObject confirmationPrompt = null;
+    [SerializeField] private GameObject comfirmationPrompt = null;
 
     [Header("Levels To Load")]
     public string _StartGameLevel;
@@ -209,8 +209,8 @@ public class MenuController : MonoBehaviour
 
     public IEnumerator ConfirmationBox()
     {
-        confirmationPrompt.SetActive(true);
+        comfirmationPrompt.SetActive(true);
         yield return new WaitForSeconds(2);
-        confirmationPrompt.SetActive(false);
+        comfirmationPrompt.SetActive(false);
     }
 }
